@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./website/css/style.css">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h2></h2>
+        <h1>Qovery Engine</h1>
+        <p>Abstraction layer to deploy microservices applications on any Cloud provider.</p>
+        <p>Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on AWS, GCP, Azure
+            and others Cloud providers. </p>
+        <a href="" target="_blank">See on Github</a>
+        <a href="" target="_blank">Join us on Discord</a>
+        <img src="./src/img/3.png" alt="">
+    </header>
+
+    <main>
+        <h2>How does it work?</h2>
+        <p>
+            Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on AWS, GCP, Azure
+            and others Cloud providers. The Qovery Engine is coded in Rust and takes advantage of Terraform, Helm,
+            Kubectl, Docker to manage resources.
+        </p>
+        <img src="./src/img/trait2.png" alt="#">
+        <h2>Usage</h2>
+        <p>Initialize EKS (AWS Kubernetes) and ECR (AWS container registry) on AWS</p>
+        <div>
+            <a href="">RUST</a>
+            <pre>
+            let engine = Engine::new(
+                context, // parameters
+                local_docker, // initialize Docker as a Build Platform
+                ecr, // initialize Elastic Container Registry
+                aws, // initialize AWS account
+                cloudflare, // initialize Cloudflare as DNS Nameservers
+            );
+            
+            let session = match engine.session() {
+                Ok(session) => session, // get the session
+                Err(config_error) => panic!("configuration error {:?}", config_error),
+            };
+            
+            let mut tx = session.transaction();
+            
+            // create EKS (AWS managed Kubernetes cluster)
+            tx.create_kubernetes(&eks);
+            
+            // create the infrastructure and wait for the result
+            match tx.commit() { 
+                TransactionResult::Ok => println!("OK"),
+                TransactionResult::Rollback(commit_err) => println!("ERROR but rollback OK"), 
+                TransactionResult::UnrecoverableError(commit_err, rollback_err) => println!("FATAL ERROR")
+            };
+        </pre>
+        </div>
+        <a href="">See more on Github</a>
+        <a href="">Join us on Discord</a>
+        <div>
+            <img src="./src/img/1.png" alt="">
+            <h3>Deploy real world applications</h3>
+            <p>
+                Qovery Engine empowers you to deploy complex applications, such as a backend, a frontend, and a database
+                in a very simple way.   Servers, networking, security, all is done by the Engine for you.
+            </p>
+            <p><a href="">See more</a></p>
+        </div>
+        <div>
+            <img src="./src/img/trait2.png" alt="">
+            <h3>Resiliency is key</h3>
+            <p>
+                Qovery Engine knows when something goes wrong on the deployment of your applications. Qovery Engine is
+                built with resiliency in mind.   A transactional engine inspired by what is provided into ACID databases
+                has been developed at the heart of the product to rollback on a consistent and working application
+                version when something goes wrong.
+            </p>
+            <p><a href="">See more</a></p>
+        </div>
+        <div>
+            <img src="./src/img/2.png" alt="">
+            <h3>On top of the best tools</h3>
+            <p>
+                Qovery Engine does not reinvent the wheel. It takes advantage of the best tools in the Cloud industry,
+                such as Kubernetes, Terraform, and Helm to manage the deployment of the infrastructure and your
+                applications.  Servers, networking, security, all is done by the Engine for you.
+            </p>
+            <p><a href="">See more</a></p>
+        </div>
+        <div>
+            <img src="" alt="">
+            <h3>Extensible</h3>
+            <p>
+                Qovery Engine is built to be highly extensible. Adding the support of a Cloud provider or a Continuous
+                Integration platform is as simple as implementing a simple programmatic interface.
+            </p>
+            <p><a href="">See more</a></p>
+        </div>
+        <h2>They use Qovery Engine</h2>
+    </main>
+    <footer>
+        <h2></h2>
+        <div>
+            <h2></h2>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <h2></h2>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <h2></h2>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <h2></h2>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <h2></h2>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <p></p>
+    </footer>
+
+</body>
+
+</html>
