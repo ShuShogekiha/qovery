@@ -4,11 +4,23 @@
   list-style: none;
   text-decoration: none;
 }
+* h2 {
+  padding: 1rem 0;
+}
+* p {
+  padding: 1rem 0;
+}
+* a {
+  color: #151B2B;
+}
 
 header {
   background-color: #151B2B;
   display: flex;
   justify-content: space-evenly;
+}
+header div {
+  max-width: 500px;
 }
 header div img {
   width: 2.5rem;
@@ -32,6 +44,7 @@ header div p {
 header div p:last-of-type {
   margin-top: 10px;
   font-size: 1rem;
+  opacity: 0.8;
 }
 header div a {
   padding: 0.5rem 1rem;
@@ -57,9 +70,108 @@ main {
   flex-direction: column;
   align-items: center;
 }
+main * {
+  max-width: 1400px;
+}
+main p.p1 {
+  text-align: center;
+}
+main a {
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+}
+main a img {
+  width: 1.25rem;
+  height: 1.2rem;
+}
+main a:first-of-type {
+  background-color: #454658;
+}
+main a:last-of-type {
+  background-color: #6578C0;
+}
+main h2:last-of-type {
+  margin-bottom: 15rem;
+}
+main div p {
+  font-size: 1rem;
+}
 main div.code {
   padding: 1rem;
   background-color: #FFFFFF;
+}
+main div.code pre {
+  margin: 2rem 0rem 0rem -3rem;
+}
+main div.code pre span.blue {
+  color: #5D64D2;
+}
+main div.code pre span.grey {
+  color: rgb(177, 177, 177);
+}
+main div.code pre span.purple {
+  color: rgb(177, 45, 177);
+}
+main div.code pre span.orange {
+  color: rgb(201, 112, 28);
+}
+main div.code pre span.cyan {
+  color: rgb(11, 206, 206);
+}
+main div.article {
+  display: flex;
+}
+main div.article div {
+  max-width: 500px;
+  margin: 5rem 3rem 2rem 5rem;
+}
+main div.article div img {
+  width: 250px;
+  margin-bottom: 2rem;
+}
+main div.article div p {
+  margin: 1rem 0;
+}
+main div.article div a {
+  background-color: #F9F9FD;
+  color: #5D64D2;
+  padding-left: 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+footer img {
+  width: 1.5rem;
+  background-color: #151B2B;
+}
+footer div {
+  margin: auto;
+}
+footer div.decoration {
+  background-color: #151B2B;
+  height: 5rem;
+  margin: 0;
+}
+footer div a {
+  color: #5D64D2;
+}
+footer div div {
+  display: flex;
+}
+footer div div div {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem 0 0;
+}
+footer div div div a {
+  color: #151B2B;
+}
+footer div div div div.logoF {
+  display: flex;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */
